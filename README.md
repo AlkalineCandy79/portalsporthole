@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+## Portal's Porthole
 
-You can use the [editor on GitHub](https://github.com/AlkalineCandy79/portalsporthole/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This tiny python script is an ArcGIS Online or ArcGIS Portal Web Map REST Service interregator.  It was developed to quickly determine what REST services were being consumed for use within Web Maps.  OATH and SAML do not work here, so you will need a standard AGOL or Local Portal account to use this script.  Perhaps in the near future when Esri updates its Python library this option will be available...hopefully.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Configuration
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Where to configure.....(An area that I will make more intuitive later.)
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+1)  gis = GIS("https://cobgis.maps.arcgis.com/","","") #non-saml or ADFS user name, #password
+2)  search_results = gis.content.search(query="",item_type="Web Map",max_items=100000)
+3)  itemURL = '=HYPERLINK("http://YOURPORTAL.maps.arcgis.com/home/item.html?id={0}","Launch Map")'.format(result.itemid)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AlkalineCandy79/portalsporthole/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This is provided as is and without warranty.  If you have any questions, please feel free to reach out to john@spence.dev.
