@@ -1,6 +1,6 @@
 ## Portal's Porthole
 
-This tiny python script is an ArcGIS Online or ArcGIS Portal Web Map REST Service interregator.  It was developed to quickly determine what REST services were being consumed for use within Web Maps.  OATH and SAML do not work here, so you will need a standard AGOL or Local Portal account to use this script.  Perhaps in the near future when Esri updates its Python library this option will be available...hopefully.
+This tiny python script is an ArcGIS Online or ArcGIS Portal Web Map REST Service interregator.  It was developed to quickly determine what REST services were being consumed for use within Web Maps, ie. Web Map Inventory.  OATH and SAML do not work here, so you will need a standard AGOL or Local Portal account to use this script.  Perhaps in the near future when Esri updates its Python library this option will be available...hopefully.
 
 ### Configuration
 
